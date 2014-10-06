@@ -7,11 +7,13 @@
 	  	<div class="row">
         	<div class="col-md-6 col-md-offset-3">
             	<form action="r" method="post" accept-charset="utf-8" class="form" role="form">   
+            		<%= form_for(@person) do |f| %>
+            		<%= render 'shared/error_messages' %>
             		<legend>Sign Up</legend>
                     <h4>Aha, it's free and always will be.</h4>
                     <div class="row">
                         <div class="col-xs-6 col-md-6">
-                            <input type="text" name="firstname" value="" class="form-control input-md" placeholder="First Name"  />
+                            <input type="text" name="firstname" value="" class="form-control input-md" placeholder=<%= f.label :firstname %>  />
                         </div>
                         <div class="col-xs-6 col-md-6">
                             <input type="text" name="lastname" value="" class="form-control input-md" placeholder="Last Name"  />

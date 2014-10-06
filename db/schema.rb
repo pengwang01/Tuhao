@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125232747) do
+ActiveRecord::Schema.define(version: 20141005234250) do
 
   create_table "cash_accts", force: true do |t|
     t.decimal  "totalBalance"
@@ -60,6 +60,14 @@ ActiveRecord::Schema.define(version: 20140125232747) do
     t.string   "city"
     t.string   "zipCode"
     t.string   "phoneNumber"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "SendFrom"
+    t.string   "SendTo"
+    t.string   "Description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
