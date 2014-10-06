@@ -10,6 +10,7 @@ p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  color: #D9D9D9;
 }
 
 pre {
@@ -33,6 +34,15 @@ div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
+  h1, label{
+    color: #D9D9D9;
+  }
+}
+
+
+
+input {
+  color: black;
 }
 
 #notice {

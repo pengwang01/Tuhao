@@ -11,3 +11,23 @@
  *= require_self
  *= require_tree .
  */
+
+body{
+background-image: url("homepage_background.jpg");
+}
+
+#side_bar {
+	font-family: verdana, arial, helvetica, sans-serif;
+  	font-size: 13px;
+  	line-height: 18px;
+  	width: 100px;
+  	float: left;
+  	border-right: 1px;
+}
+
+#main_body {
+	font-family: verdana, arial, helvetica, sans-serif;
+  	font-size: 13px;
+  	line-height: 18px;
+  	padding-left: 150px;
+}
