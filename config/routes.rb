@@ -2,6 +2,7 @@ Tuhao::Application.routes.draw do
   resources :posts
 
   resource :person
+
   root 'welcome#index'
   
   match '/signup',    to: 'person#signup',       via: 'get'
