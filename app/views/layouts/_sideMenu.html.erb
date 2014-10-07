@@ -1,0 +1,25 @@
+<div id="side_bar">
+  <ul class="nav nav-pills nav-stacked">
+    <li class= <%= 
+    if params[:controller]=="welcome" && params[:action] == "index" then
+    	"active"
+    else
+    	""
+    end
+    %> ><a href=<%= root_path%>>Home</a></li>
+    <li class= <%= 
+    if params[:controller]=="posts" && params[:action] == "index" then
+    	"active"
+    else
+    	""
+    end
+    %> ><a href=<%= posts_path%>>Show Posts</a></li>
+    <li class= <%= 
+    if params[:controller]=="posts" && params[:action] == "new" then
+    	"active"
+    else
+    	""
+    end
+    %> ><a href=<%= new_post_path%>>New Post</a></li>
+  </ul>
+</div>

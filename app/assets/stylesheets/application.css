@@ -20,7 +20,7 @@ background-image: url("homepage_background.jpg");
 	font-family: verdana, arial, helvetica, sans-serif;
   	font-size: 13px;
   	line-height: 18px;
-  	width: 100px;
+  	width: 120px;
   	float: left;
   	border-right: 1px;
 }
@@ -29,5 +29,5 @@ background-image: url("homepage_background.jpg");
 	font-family: verdana, arial, helvetica, sans-serif;
   	font-size: 13px;
   	line-height: 18px;
-  	padding-left: 150px;
+  	padding-left: 500px;
 }

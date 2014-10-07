@@ -4,18 +4,26 @@
   </head>
   <body id="welcome">
     
-    <div id="side_bar">
-            <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a href=<%= root_path%>>Home</a></li>
-              <li><a href=<%= posts_path%>>Show Post</a></li>
-              <li><a href=<%= new_post_path%>>New Post</a></li>
-            </ul>
-    </div>
-    <div class="center main_body">
+    <%= render 'layouts/sideMenu' %>
+    <div id="main_body" class="center">
         
   		<h1>Welcome to Tuhao App</h1>
    		<h2>Everyone can be a shipper, deliver your package faster and cheaper.</h2> 
 
+        <form class="navbar-form">
+            <div class="form-group" style="display:inline;">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search packages here">
+                    <span class="input-group-addon">Search<span class="glyphicon glyphicon-search"></span></span>
+                </div>
+            </div>
+        </form>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <table>
             <thead>
                 <tr>
