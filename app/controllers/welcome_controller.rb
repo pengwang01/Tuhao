@@ -1,18 +1,12 @@
 class WelcomeController < ApplicationController
 
-	@@postsController
-
 	def index
-		@@postsController = PostsController.new
-		@@postsController.show
-		@posts = @@postsController.index
-	end
+		if params[:id] then
+			@posts = Post.find_all_by_id(params[:id])
 
-	helper_method :search
-
-	def search
-		@@postsController = PostsController.new
-		puts @posts = @@postsController.index.top
+		else
+			@posts = Post.all
+		end	
 	end
 
 end
