@@ -44,14 +44,6 @@ ActiveRecord::Schema.define(version: 20141005234250) do
   end
 
   create_table "items", force: true do |t|
-    t.string   "itemName"
-    t.decimal  "length"
-    t.decimal  "width"
-    t.decimal  "weight"
-    t.decimal  "height"
-    t.string   "description"
-    t.string   "specialInstruction"
-    t.decimal  "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,8 +1,8 @@
 class WelcomeController < ApplicationController
-
+	@posts 
 	def index
-		if params[:id] then
-			@posts = Post.find_all_by_id(params[:id])
+		if params[:search] then
+			@posts = Post.find(:all, :conditions => ['sendFrom LIKE ?', "%#{params[:search]}%"])
 
 		else
 			@posts = Post.all
