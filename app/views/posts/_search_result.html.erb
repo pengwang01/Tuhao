@@ -1,28 +1,34 @@
- 
-<table>
-    <thead>
-        <tr>
-            <th>Index</th>
-            <th>SendFrom</th>
-            <th>SendTo</th>
-            <th>Description</th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    
-    <tbody>
-        <% @posts.each do |post| %>
-            <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" id="Posts">
-                <td width="10px"><%= post.id %></td>
-                <td width="150px"><%= post.SendFrom %></td>
-                <td width="150px"><%= post.SendTo %></td>
-                <td width="300px"><%= post.Description %></td>
-                <td width="50px"><%= link_to 'Show', post %></td>
-                <td width="50px"><%= link_to 'Edit', edit_post_path(post) %></td>
-                <td width="50px"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% if params[:search] then %>
+    <% if @posts.count > 0 then %> 
+    <table>
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>SendFrom</th>
+                <th>SendTo</th>
+                <th>Description</th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
-        <% end %>
-    </tbody>
-</table>
+        </thead>
+        
+        <tbody>
+            <% @posts.each do |post| %>
+                <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" id="Posts">
+                    <td width="10px"><%= post.id %></td>
+                    <td width="150px"><%= post.SendFrom %></td>
+                    <td width="150px"><%= post.SendTo %></td>
+                    <td width="300px"><%= post.Description %></td>
+                    <td width="50px"><%= link_to 'Show', post %></td>
+                    <td width="50px"><%= link_to 'Edit', edit_post_path(post) %></td>
+                    <td width="50px"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+
+    <% else %>
+        <h1>oops, no result found</h1>
+    <% end %>
+<% end %>

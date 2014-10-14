@@ -3,9 +3,6 @@ class WelcomeController < ApplicationController
 	def index
 		if params[:search] then
 			@posts = Post.find(:all, :conditions => ['sendFrom LIKE ?', "%#{params[:search]}%"])
-
-		else
-			@posts = Post.all
 		end	
 	end
 
