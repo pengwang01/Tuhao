@@ -8,49 +8,13 @@
         
   		<h1>Welcome to Tuhao App</h1>
    		<h2>Everyone can be a shipper, deliver your package faster and cheaper.</h2> 
-
-        <form class="navbar-form" name="search">
-            <div class="form-group" style="display:inline;">
-                <div class="input-group">
-                    <input type="text" class="form-control" id='search_field' placeholder="Search by city Send From" name="search" >
-                    <span class="input-group-addon">
-                        <button class="glyphicon glyphicon-search" id='search'></button>
-                    </span>
-                </div>
-            </div>
-        </form>
+        <%= render 'welcome/search_bar' %>
         <br/>
         <br/>
         <br/>
         <br/>
         <br/>
-        <table>
-            <thead>
-                <tr>
-                    <th>Index</th>
-                    <th>SendFrom</th>
-                    <th>SendTo</th>
-                    <th>Description</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            
-            <tbody>
-                <% @posts.each do |post| %>
-                    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" id="Posts">
-                        <td width="10px"><%= post.id %></td>
-                        <td width="150px"><%= post.SendFrom %></td>
-                        <td width="150px"><%= post.SendTo %></td>
-                        <td width="300px"><%= post.Description %></td>
-                        <td width="50px"><%= link_to 'Show', post %></td>
-                        <td width="50px"><%= link_to 'Edit', edit_post_path(post) %></td>
-                        <td width="50px"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                    </tr>
-                <% end %>
-            </tbody>
-        </table>
+        <%= render 'posts/search_result' %>
         </br>
         <%= link_to "Create New Post", new_post_path, class: "btn btn-sm btn-primary" %>
 	</div>
