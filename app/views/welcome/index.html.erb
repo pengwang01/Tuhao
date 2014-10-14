@@ -3,20 +3,18 @@
   <head>
   </head>
   <body id="welcome">
-    <%= render 'layouts/sideMenu' %>
+    <!-- <%= render 'layouts/sideMenu' %> -->
     <div id="main_body" class="center">
+        <br/><br/><br/><br/>
         
   		<h1>Welcome to Tuhao App</h1>
    		<h2>Everyone can be a shipper, deliver your package faster and cheaper.</h2> 
-        <%= render 'welcome/search_bar' %>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <%= render 'welcome/search_bar' %> 
+        <br/><br/><br/><br/><br/>
         <%= render 'posts/search_result' %>
         </br>
         <%= link_to "Create New Post", new_post_path, class: "btn btn-sm btn-primary" %>
+        <%= link_to "View All Posts", posts_path, class: "btn btn-sm btn-primary" %>
 	</div>
   </body>
 </html>

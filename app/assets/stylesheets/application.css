@@ -29,5 +29,6 @@ background-image: url("homepage_background.jpg");
 	font-family: verdana, arial, helvetica, sans-serif;
   	font-size: 13px;
   	line-height: 18px;
-  	padding-left: 500px;
+  	padding-left: 100px;
+    padding-right: 100px;
 }
