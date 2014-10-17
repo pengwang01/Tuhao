@@ -1,4 +1,4 @@
-<% if params[:search] then %>
+<% if params[:search] || params[:from] then %>
     <% if @posts.count > 0 then %> 
     <table>
         <thead>
