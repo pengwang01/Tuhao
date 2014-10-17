@@ -14,3 +14,41 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+<script>
+	$(document).ready(function() {
+  		$('.search-toggle').click(function(){
+			//get collapse content selector
+			var collapse_content_selector = $("#Simple_search_form ");
+			var expand_content_selector = $("#Advance_search_form");					
+
+			//make the collapse content to be shown or hide
+			var toggle_switch = $(this);
+
+			$(collapse_content_selector).toggle(function(){
+			  	if($(this).css('display')=='none'){
+		        	//change the button label to be 'Show'
+					toggle_switch.html('Advance Search');
+			  	}else{
+		            //change the button label to be 'Hide'
+					toggle_switch.html('Simple Search');
+			  	}
+			});
+
+			$(expand_content_selector).toggle(function(){
+			  	if($(this).css('display')=='none'){
+		        	//change the button label to be 'Show'
+					toggle_switch.html('Simple Search');
+			  	}else{
+		            //change the button label to be 'Hide'
+					toggle_switch.html('Advance Search');
+			  	}
+			});
+
+			
+  		});
+
+	});	
+</script>

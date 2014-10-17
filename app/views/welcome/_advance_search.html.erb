@@ -3,10 +3,12 @@
 	$(document).ready(function() {
   		$('.search-toggle').click(function(){
 			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');					
+			var collapse_content_selector = $("#Simple_search_form ");
+			var expand_content_selector = $("#Advance_search_form");					
 
 			//make the collapse content to be shown or hide
 			var toggle_switch = $(this);
+
 			$(collapse_content_selector).toggle(function(){
 			  	if($(this).css('display')=='none'){
 		        	//change the button label to be 'Show'
@@ -16,14 +18,34 @@
 					toggle_switch.html('Simple Search');
 			  	}
 			});
+
+			$(expand_content_selector).toggle(function(){
+			  	if($(this).css('display')=='none'){
+		        	//change the button label to be 'Show'
+					toggle_switch.html('Simple Search');
+			  	}else{
+		            //change the button label to be 'Hide'
+					toggle_switch.html('Advance Search');
+			  	}
+			});
+
+			
   		});
 
 	});	
 </script>
 
-<div id="collapse1" style="display:none">
+<div id="Simple_search_form" style="display:none">
 	<form class="navbar-form">
 			<lable> From:  </lable> <input type="text" name="from" />
 		    <lable> To:  </lable> <input type="text" name="to" />
+		    <button type="submit" class="btn btn-primary">
+				<span class="glyphicon glyphicon-search">
+				</span>
+			</button>
 	</form>
 </div>
+
+<button type="button" href="#collapse1" class="btn btn-primary search-toggle" style="width:140px">
+	<span >Advance Search</span>
+</button>
