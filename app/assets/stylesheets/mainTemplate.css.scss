@@ -1,10 +1,9 @@
-@import "bootstrap";
+
+/*----------------- mixins, variables, etc. ------------------*/
+
 $lightGray: #D9D9D9;
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
-
-/* mixins, variables, etc. */
-
-$grayMediumLight: #eaeaea;
+$grayMediumLight: #8A8A8A;
+$orange: #CC7537;
 
 
 @mixin box_sizing {
@@ -14,13 +13,15 @@ $grayMediumLight: #eaeaea;
 }
 
 
+/* --------------------page Common style -------------------*/
 html {
   overflow-y: scroll;
 }
 
 body {
   padding-top: 60px;
-  
+  background-image: url("homepage_background.jpg");  
+  background-size: 100%
 }
 
 section { 
@@ -31,16 +32,27 @@ textarea {
   resize: vertical;
 }
 
+.main_body {
+  font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
 .center {
   text-align: center;
   h1 {
     margin-bottom: 10px;
-    color: #1C1C1B;
+    color: $orange;
   }
 }
 
+.container{
+  padding-top: 5px;
+}
 
-/* typography */
+/* ---------------------typography 字体排版 -------------------------*/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -50,10 +62,12 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  font-weight: bold;
+  color: $orange;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -64,9 +78,11 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: black;
 }
 
-/* header */
+
+/*-------------------------- header ---------------------------*/
 
 #logo {
   float: left;
@@ -83,11 +99,27 @@ p {
   }
 }
 
-.container{
-  padding-top: 5px;
+.navbar-default .navbar-brand{
+    color:#fff;
+    font-size:30px;
+    font-weight:bold;
+  }
+.form {
+  margin-bottom:20px;
+  .form-control { margin-bottom: 10px;}
+}
+@media (min-width:768px) {
+  #home{
+    margin-top:50px;
+  }
+  #home .slogan{
+    color: #0e385f;
+    line-height: 29px;
+    font-weight:bold;
+  }
 }
 
-/* footer */
+/*-------------------------footer -----------------------------*/
 
 footer {
   margin-top: 45px;
@@ -95,9 +127,10 @@ footer {
   border-top: 1px solid #eaeaea;
   color: $lightGray;
   a {
-    color: #555;
+    color: $orange;
     &:hover {
-      color: #222;
+      text-color: #fff;
+      text-decoration: none;
     }
   }
   small {
@@ -107,84 +140,20 @@ footer {
     float: right;
     list-style: none;
     li {
-      float: left;
-      margin-left: 10px;
+        float: left;
+        margin-left: 10px;
+        a {
+        color: $orange;
+        }
+        a:visited {
+          color: $orange;
+        }
     }
   }
 }
 
 
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
-
-/* sidebar */
-
-aside {
-  section {
-    padding: 10px 0;
-    border-top: 1px solid $lightGray;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
-
-input {
-  height: auto !important;
-  color: lightGray;
-}
-
-/* forms */
-
-#error_explanation {
-  color: #f00;
-  ul {
-    list-style: none;
-    margin: 0 0 18px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
-}
-
-
-/* table */
+/*---------------- search result table --------------------------*/
 table {
   margin-left:auto;
   margin-right:auto;
@@ -192,6 +161,24 @@ table {
 
 table, th, td{
    border: 1px solid black;
+}
+
+.list_line_even {
+  background:   #F09B46;
+}
+
+.list_line_odd {
+  background:   #469BF0;
+}
+
+
+/*-------------------------- debug -----------------------*/
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
 
   

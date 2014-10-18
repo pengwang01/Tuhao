@@ -48,4 +48,4 @@ end
 gem 'rspec', '~>2.14.1'
 
 # Peng adds bootstrap lib
-gem 'bootstrap-sass', '3.0.0'
+gem 'bootstrap-sass', '~> 3.2.0'
