@@ -157,6 +157,7 @@ footer {
 table {
   margin-left:auto;
   margin-right:auto;
+  width: 100%;
 }
 
 table, th, td{
@@ -171,6 +172,9 @@ table, th, td{
   background:   #469BF0;
 }
 
+.search_count{
+  text-align:left;
+}
 
 /*-------------------------- debug -----------------------*/
 .debug_dump {
@@ -180,5 +184,3 @@ table, th, td{
   margin-top: 45px;
   @include box_sizing;
 }
-
-  
