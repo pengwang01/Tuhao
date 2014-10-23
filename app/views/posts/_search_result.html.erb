@@ -1,9 +1,9 @@
-<% if params[:search] || params[:from] then %>
+<% if params[:simple_from] || params[:simple_to] then %>
     <% if @posts.count > 0 then %> 
     <h5 class="search_count">Total find: <%= @posts.count %></h5>
     <table>
         <thead>
-            <tr>
+            <tr class="table_header">
                 <th>Index</th>
                 <th>SendFrom</th>
                 <th>SendTo</th>
@@ -15,37 +15,19 @@
         </thead>
         
         <tbody>
-            <% 
-                if params[:page] == nil then
-                    params[:page] = 1
-                end
-
-                for index in (params[:page].to_i-1)*4..params[:page].to_i*4-1 %>
-
+            <% @posts.each do |post| %>
                 <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" id="Posts">
-                    <% if index < @posts.count then %>
-                        <td width="10px"><%= @posts[index].id %></td>
-                        <td width="150px"><%= @posts[index].SendFrom %></td>
-                        <td width="150px"><%= @posts[index].SendTo %></td>
-                        <td width="300px"><%= @posts[index].Description %></td>
-                        <td width="50px"><%= link_to 'Show', @posts[index] %></td>
-                        <td width="50px"><%= link_to 'Edit', edit_post_path(@posts[index]) %></td>
-                        <td width="50px"><%= link_to 'Destroy', @posts[index], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                    <% end%>
+                    <td width="10px"><%= post.id %></td>
+                    <td width="150px"><%= post.SendFrom %></td>
+                    <td width="150px"><%= post.SendTo %></td>
+                    <td width="300px"><%= post.Description %></td>
+                    <td width="50px"><%= link_to 'Show', post %></td>
+                    <td width="50px"><%= link_to 'Edit', edit_post_path(post) %></td>
+                    <td width="50px"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                 </tr>
-                <% end %>
-            
+            <% end %>
         </tbody>
     </table>
-    <ul class="pagination pagination-sm">
-        <li><a href="#">&laquo;</a></li>
-        <li class="active"><a href=<%= request.original_url + "&page=1"%>>1</a></li>
-        <li><a href=<%= request.original_url + "&page=2"%>>2</a></li>
-        <li><a href=<%= request.original_url + "&page=3"%>>3</a></li>
-        <li><a href=<%= request.original_url + "&page=4"%>>4</a></li>
-        <li><a href=<%= request.original_url + "&page=4"%>>5</a></li>
-        <li><a href="#">&raquo;</a></li>
-    </ul>
 
     <% else %>
         <h1>oops, no result found</h1>

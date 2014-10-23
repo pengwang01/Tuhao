@@ -1,17 +1,9 @@
 
-/*----------------- mixins, variables, etc. ------------------*/
 
+
+/*----------------- font colors ------------------*/
 $lightGray: #D9D9D9;
-$grayMediumLight: #8A8A8A;
 $orange: #CC7537;
-
-
-@mixin box_sizing {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 
 /* --------------------page Common style -------------------*/
 html {
@@ -34,18 +26,14 @@ textarea {
 
 .main_body {
   font-family: verdana, arial, helvetica, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-    padding-left: 100px;
-    padding-right: 100px;
+  font-size: 13px;
+  line-height: 18px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .center {
   text-align: center;
-  h1 {
-    margin-bottom: 10px;
-    color: $orange;
-  }
 }
 
 .container{
@@ -66,7 +54,7 @@ h1 {
   color: $orange;
 }
 
-main_h2 {
+h2 {
   font-size: 2.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
@@ -96,26 +84,6 @@ p {
   line-height: 1;
   &:hover {
     text-decoration: none;
-  }
-}
-
-.navbar-default .navbar-brand{
-    color:#fff;
-    font-size:30px;
-    font-weight:bold;
-  }
-.form {
-  margin-bottom:20px;
-  .form-control { margin-bottom: 10px;}
-}
-@media (min-width:768px) {
-  #home{
-    margin-top:50px;
-  }
-  #home .slogan{
-    color: #0e385f;
-    line-height: 29px;
-    font-weight:bold;
   }
 }
 
@@ -152,31 +120,13 @@ footer {
   }
 }
 
-
-/*---------------- search result table --------------------------*/
-table {
-  margin-left:auto;
-  margin-right:auto;
-  width: 100%;
-}
-
-table, th, td{
-   border: 1px solid black;
-}
-
-.list_line_even {
-  background:   #F09B46;
-}
-
-.list_line_odd {
-  background:   #469BF0;
-}
-
-.search_count{
-  text-align:left;
-}
-
 /*-------------------------- debug -----------------------*/
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .debug_dump {
   clear: both;
   float: left;

@@ -7,9 +7,6 @@ class WelcomeController < ApplicationController
 		else
 			@posts = Post.find(:all, 
 				:conditions => ['sendFrom LIKE ? and sendTo LIKE ? and description LIKE ?' , "%#{params[:from]}%", "%#{params[:to]}%", "%#{params[:dateCreated]}%"])
-
-		end	
-
+		end
 	end
-
 end

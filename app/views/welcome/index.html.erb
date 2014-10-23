@@ -2,9 +2,14 @@
     <div class="main_body center">
         <br/><br/><br/><br/>
 		<h1>Welcome to Tuhao App</h1>
-		<main_h2>Everyone can be a shipper, deliver your package faster and cheaper.</main_h2> 
+		<h2>Everyone can be a shipper, deliver your package faster and cheaper.</h2> 
+
+        <button type="button" class="btn btn-info btn-circle btn-xl search-toggle"><i class="glyphicon glyphicon-ok"></i>AD Search</button>
+        <button type="button" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-link"></i><%= link_to "Create New", new_post_path%></button>
+        <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-heart"></i><%= link_to "View All", posts_path %></button>
         <%= render 'welcome/search_bar' %> 
         <%= render 'welcome/advance_search' %>
+
         <br/><br/><br/><br/><br/>
         <%= render 'posts/search_result' %>
         </br>
