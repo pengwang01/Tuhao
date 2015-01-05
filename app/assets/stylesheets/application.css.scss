@@ -12,6 +12,9 @@
  *= require mainTemplate
  *= require welcome
  *= require posts
+ *= require demo
+ *= require style.css
+
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";

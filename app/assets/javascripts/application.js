@@ -17,7 +17,7 @@
  $(document).ready(function() {
         $('.search-toggle').click(function(){
         //get collapse content selector
-        var collapse_content_selector = $("#advance_search_form ");
+        var collapse_content_selector = $("#advance_search_form");
         var expand_content_selector = $("#simple_search_form");          
 
         //make the collapse content to be shown or hide
@@ -26,20 +26,20 @@
         $(collapse_content_selector).toggle(function(){
             if($(this).css('display')=='none'){
                 //change the button label to be 'Show'
-            toggle_switch.html('AD Search');
+                toggle_switch.html('AD Search');''
             }else{
                   //change the button label to be 'Hide'
-            toggle_switch.html('SP Search');
+                toggle_switch.html('SP Search');
             }
         });
 
         $(expand_content_selector).toggle(function(){
             if($(this).css('display')=='none'){
                 //change the button label to be 'Show'
-            toggle_switch.html('SP Search');
+                toggle_switch.html('SP Search');
             }else{
                   //change the button label to be 'Hide'
-            toggle_switch.html('AD Search');
+                toggle_switch.html('AD Search');
             }
         });
       });

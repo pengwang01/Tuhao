@@ -1,17 +1,61 @@
-<body>
+<!-- <body>
     <div class="main_body center">
-        <br/><br/><br/><br/>
-		<h1>Welcome to Tuhao App</h1>
-		<h2>Everyone can be a shipper, deliver your package faster and cheaper.</h2> 
-
-        <button type="button" class="btn btn-info btn-circle btn-xl search-toggle"><i class="glyphicon glyphicon-ok"></i>AD Search</button>
+        <%= render 'welcome/slides' %> 
+        <!-- 
         <button type="button" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-link"></i><%= link_to "Create New", new_post_path%></button>
         <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-heart"></i><%= link_to "View All", posts_path %></button>
+
         <%= render 'welcome/search_bar' %> 
         <%= render 'welcome/advance_search' %>
+        <button type="button" class="btn btn-primary search-toggle" style="width:140px">
+                <span>AD Search</span>
+            </button>
 
         <br/><br/><br/><br/><br/>
         <%= render 'posts/search_result' %>
         </br>
     </div>
 </body>
+ -->
+
+<div id="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1>Tired of long waiting line of post office?</h1>
+          <h2 class="subtitle">Post your package here, someone will pick it up and ship it for you ASAP.</h2>
+          <h1>Commute a lot? Need some extra bucks?</h1>
+          <h2 class="subtitle">Become a shipper, deliver some package based on your route and make some extra money!</h2>
+          <form class="form-inline signup" role="form">
+            <div class="form-group">
+              <input class="form-control" id="exampleInputEmail1" placeholder="City From">
+              <input class="form-control" id="exampleInputEmail1" placeholder="City To">
+            </div>
+            <button type="submit" class="btn btn-theme">Search Package</button>
+          </form>         
+        </div>
+        <div class="col-lg-4 col-lg-offset-2">
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>         
+            <!-- slides -->
+            <div class="carousel-inner">
+            <div class="item active">
+              <img src="assets/slide1.png" alt="">
+            </div>
+            <div class="item">
+              <img src="assets/slide2.png" alt="">
+            </div>
+            <div class="item">
+              <img src="assets/slide3.png" alt="">
+            </div>
+            </div>
+          </div>    
+        </div>
+        
+      </div>
+    </div>
+  </div>
