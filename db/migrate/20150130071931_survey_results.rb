@@ -14,5 +14,6 @@ class SurveyResults < ActiveRecord::Migration
       t.integer :UserAnswer9
       t.integer :UserAnswer10
       t.string :UserComment
+    end
   end
 end

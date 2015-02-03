@@ -12,5 +12,6 @@ class Surveys < ActiveRecord::Migration
       t.integer :QuestionId8
       t.integer :QuestionId9
       t.integer :QuestionId10
+    end
   end
 end

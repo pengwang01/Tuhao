@@ -11,7 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141005234250) do
+ActiveRecord::Schema.define(version: 20150130071931) do
+
+  create_table "SurveyQuestions", force: true do |t|
+    t.integer "QuestionId"
+    t.string  "QuestionText"
+    t.string  "Answer1"
+    t.string  "Answer2"
+    t.string  "Answer3"
+    t.string  "Answer4"
+  end
+
+  create_table "SurveyResults", force: true do |t|
+    t.integer "ResultId"
+    t.integer "SurveyId"
+    t.integer "UserAnswer1"
+    t.integer "UserAnswer2"
+    t.integer "UserAnswer3"
+    t.integer "UserAnswer4"
+    t.integer "UserAnswer5"
+    t.integer "UserAnswer6"
+    t.integer "UserAnswer7"
+    t.integer "UserAnswer8"
+    t.integer "UserAnswer9"
+    t.integer "UserAnswer10"
+    t.string  "UserComment"
+  end
+
+  create_table "Surveys", force: true do |t|
+    t.integer "SurveyId"
+    t.integer "QuestionId1"
+    t.integer "QuestionId2"
+    t.integer "QuestionId3"
+    t.integer "QuestionId4"
+    t.integer "QuestionId5"
+    t.integer "QuestionId6"
+    t.integer "QuestionId7"
+    t.integer "QuestionId8"
+    t.integer "QuestionId9"
+    t.integer "QuestionId10"
+  end
 
   create_table "cash_accts", force: true do |t|
     t.decimal  "totalBalance"
