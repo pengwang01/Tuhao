@@ -7,6 +7,7 @@ Tuhao::Application.routes.draw do
   
   match '/signup',    to: 'person#signup',       via: 'get'
   match '/signin',    to: 'person#signin',       via: 'get'
+  match '/howto',     to: 'welcome#howto',       via: 'get'
 
   match '/welcome/:id' => 'welcome#index',  via: 'get'
 
