@@ -47,5 +47,8 @@ end
 # Peng adds rspec testing lib
 gem 'rspec', '~>2.14.1'
 
-# Peng adds bootstrap lib
-gem 'bootstrap-sass', '~> 3.2.0'
+# Peng adds bootstrap-sass lib
+gem 'bootstrap-sass', '~> 3.3.3'
+
+# Peng adds autoprefixer-rails
+gem 'autoprefixer-rails'

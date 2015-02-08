@@ -1,7 +1,6 @@
-<div id="header">
-    <div class="container center">
+    <div id="main-body" class="container center imageBG-others">
         <div class="well well-lg center" style="width: 70%; margin: auto">
-            <legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a> Sign up!</legend>
+            <legend><i class="glyphicon glyphicon-user"></i> Sign up!</legend>
             <form action="#" method="post" class="form" role="form">
             <div class="row">
                 <div class="col-xs-6 col-md-6">
@@ -12,9 +11,13 @@
                     <input class="form-control" name="lastname" placeholder="Last Name" type="text" required />
                 </div>
             </div>
-            <input class="form-control" name="youremail" placeholder="Your Email" type="email" />
-            <input class="form-control" name="reenteremail" placeholder="Re-enter Email" type="email" />
+            <br/>
+            <input class="form-control" name="youremail" placeholder="Email" type="email" />
+            <br/>
             <input class="form-control" name="password" placeholder="New Password" type="password" />
+            <br/>
+            <input class="form-control" name="reenterpassword" placeholder="Re-enter Password" type="password" />
+            <br/>
             <label for="">
                 Birth Date</label>
             <div class="row">
@@ -43,6 +46,7 @@
                     </select>
                 </div>
             </div>
+            <br/>
             <label class="radio-inline">
                 <input type="radio" name="sex" id="inlineCheckbox1" value="male" />
                 Male
@@ -53,9 +57,8 @@
             </label>
             <br />
             <br />
-            <button class="btn btn-lg btn-primary btn-block" type="submit">
+            <button class="btn btn-md btn-primary btn-block" type="submit">
                 Sign up</button>
             </form>
         </div>
     </div>
-</div>

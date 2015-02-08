@@ -1,43 +1,14 @@
 <!-- Fixed navbar -->
-<div class="navbar navbar-color navbar-fixed-top">
+<div class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
 			<%= link_to "PlayCute", root_path, class: "navbar-brand" %>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
-			<li><%= link_to "Signup", 'signup'%></li>
-			<li><a href="#">Sign in</a></li>
+				<li><%= link_to "SignUp", 'signup'%></li>
+				<li><%= link_to "SignIn", 'signin'%></li>
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>
 </div>
-
-<!-- <header class="navbar navbar-fixed-top navbar-inverse">
-	<div class="navbar-inner">
-	    <div class="container">
-	    	<%= link_to "Tuhao", root_path, id: "logo" %>
-	    	<div class="pull-right" style="padding-top:5px">
-	      		<form class="form-inline" role="form">
-					<div class="form-group">
-						<label class="sr-only" for="exampleInputEmail2">Email address</label>
-						<input type="email" class="form-control input-sm" id="exampleInputEmail2" placeholder="Enter email">
-					</div>
-					<div class="form-group">
-						<label class="sr-only" for="exampleInputPassword2">Password</label>
-						<input type="password" class="form-control input-sm" id="exampleInputPassword2" placeholder="Password">
-					</div>
-					<%= link_to "Sign In", '#', class: "btn btn-sm btn-primary" %>
-					<%= link_to "Register", 'signup', class: "btn btn-sm btn-success" %>
-				</form>			
-			</div>
-	    </div>
-  	</div>
-
-  	
-</header> -->
