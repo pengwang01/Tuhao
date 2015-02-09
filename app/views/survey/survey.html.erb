@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<title>About Us</title>
+		<%= stylesheet_link_tag "fwSliderComponent",media:"all" %>
+		<%= stylesheet_link_tag "fwSliderDefault",media:"all" %>
+	</head>
+	<body>
+		<div class="container">	
+			<header class="clearfix">
+				<span>PetPile</span>
+				<h1>Customer Survey</h1>
+			</header>
+			<div id="cbp-fwslider" class="cbp-fwslider">
+				<ul>
+					<li>
+						<div style="height:100%;">
+							<p>Here is Question One</p>
+							<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
+						</div>
+					</li>
+					<li>
+						<div style="height:100%;">
+							<p>Here is Question Two</p>
+							<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
+						</div>
+					</li>
+					<li>
+						<div style="height:100%;" margin:10px>
+							<p>Here is Question Three</p>
+							<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
+						</div>
+					</li>
+					<li>
+						<div style="height:100%;">
+							<p>Here is Question Four</p>
+							<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
+						</div>
+					</li>
+					<li>
+						<div style="height:100%;">
+							<p>Here is Question Five</p>
+							<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
+						</div>
+					</li>
+					<li>
+						<div style="height:100%;">
+							<p>Here is Question Six</p>
+							<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
+							<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
+						</div>
+						<button class="btn btn-theme">Submit</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>
+		<%= javascript_include_tag "SurveyPageModernizr" %>
+		<%= javascript_include_tag "cbpFWSlider.js" %>
+		<script>
+			$( function() {
+				$( '#cbp-fwslider' ).cbpFWSlider();
+
+			} );
+		</script>
+	</body>
+</html>
