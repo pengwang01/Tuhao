@@ -1,7 +1,7 @@
-    <div id="main-body" class="container center imageBG-others">
+    <div id="main-body" class=" center_ver container center imageBG-others">
         <div class="well well-lg center" style="width: 70%; margin: auto">
             <legend><i class="glyphicon glyphicon-user"></i> Sign up!</legend>
-            <form action="#" method="post" class="form" role="form">
+            <!-- <form action="#" method="post" class="form" role="form">
             <div class="row">
                 <div class="col-xs-6 col-md-6">
                     <input class="form-control" name="firstname" placeholder="First Name" type="text"
@@ -17,48 +17,15 @@
             <input class="form-control" name="password" placeholder="New Password" type="password" />
             <br/>
             <input class="form-control" name="reenterpassword" placeholder="Re-enter Password" type="password" />
-            <br/>
-            <label for="">
-                Birth Date</label>
-            <div class="row">
-                <div class="col-xs-4 col-md-4">
-                    <select class="form-control">
-                        <option value="Month">Month</option>
-                        <% for i in 1..12 do %>
-                            <option value='<%=i%>' ><%= i%></option>
-                        <% end%>
-                    </select>
-                </div>
-                <div class="col-xs-4 col-md-4">
-                    <select class="form-control">
-                        <option value="Day">Day</option>
-                        <% for i in 1..31 do %>
-                            <option value='<%=i%>' ><%= i%></option>
-                        <% end%>
-                    </select>
-                </div>
-                <div class="col-xs-4 col-md-4">
-                    <select class="form-control">
-                        <option value="Year">Year</option>
-                        <% for i in 1990..2015 do %>
-                            <option value='<%=i%>' ><%= i%></option>
-                        <% end%>
-                    </select>
-                </div>
-            </div>
-            <br/>
-            <label class="radio-inline">
-                <input type="radio" name="sex" id="inlineCheckbox1" value="male" />
-                Male
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="sex" id="inlineCheckbox2" value="female" />
-                Female
-            </label>
             <br />
             <br />
             <button class="btn btn-md btn-primary btn-block" type="submit">
                 Sign up</button>
-            </form>
+            </form> -->
+
+
+            <% form_for @user do |f| %>
+                <%= f.label :first_name %>
+            <% end %>
         </div>
     </div>

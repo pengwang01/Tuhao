@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150130071931) do
+ActiveRecord::Schema.define(version: 20150208235428) do
 
   create_table "SurveyQuestions", force: true do |t|
     t.integer "QuestionId"
@@ -87,22 +87,6 @@ ActiveRecord::Schema.define(version: 20150130071931) do
     t.datetime "updated_at"
   end
 
-  create_table "people", force: true do |t|
-    t.integer  "type"
-    t.string   "username"
-    t.string   "password"
-    t.string   "firstName"
-    t.string   "lastName"
-    t.string   "email"
-    t.string   "address1"
-    t.string   "address2"
-    t.string   "city"
-    t.string   "zipCode"
-    t.string   "phoneNumber"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "posts", force: true do |t|
     t.string   "SendFrom"
     t.string   "SendTo"
@@ -145,6 +129,15 @@ ActiveRecord::Schema.define(version: 20150130071931) do
   create_table "transactions", force: true do |t|
     t.integer  "cashAcct"
     t.integer  "deposit"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "password"
+    t.string   "firstName"
+    t.string   "lastName"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

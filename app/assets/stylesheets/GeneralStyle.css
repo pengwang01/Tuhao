@@ -104,12 +104,9 @@ a.navbar-brand:hover {
 }
 
 /* Header */
-
 #main-body{	
 	background-color: #444;
 	margin-top: 20px;
-  padding-bottom: 80px;
-	padding-top: 150px;
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 650px;
@@ -131,17 +128,29 @@ a.navbar-brand:hover {
 }
 
 .imageBG-others {
-  background: url(PlayCute/GeneralBG.jpg) repeat center top;
+  background: url(PlayCute/GeneralBG_dim.jpg) repeat center top;
+}
+.center_ver{
+  padding-bottom: 80px;
+  padding-top: 150px;
 }
 
+.regular_ver{
+  padding-bottom: 80px;
+  padding-top: 50px;
+}
+
+
 #main-body h1 {
-	margin-top: 60px;
-	margin-bottom: 15px;
+  margin-top: 15px;
+	margin-bottom: 30px;
 	color: #549854;
 	font-size: 30px;
 	font-weight: 900;
 	letter-spacing: -1px;
 }
+
+
 
 h2.subtitle {
 	color: #549854;
