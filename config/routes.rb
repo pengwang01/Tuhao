@@ -1,11 +1,9 @@
 Tuhao::Application.routes.draw do
-  resources :posts
-
-  resource :person
+  resources :users
 
   root 'welcome#index'
   
-  match '/signup',    to: 'person#signup',       via: 'get'
+  match '/signup',    to: 'users#new',       via: 'get'
   match '/signin',    to: 'person#signin',       via: 'get'
   match '/howto',     to: 'welcome#howto',       via: 'get'
   match '/survey',    to: 'survey#survey',       via: 'get'
