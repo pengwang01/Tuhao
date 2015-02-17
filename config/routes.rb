@@ -1,13 +1,15 @@
 Tuhao::Application.routes.draw do
-  resources :users
+  
 
   root 'welcome#index'
   
-  match '/signup',    to: 'users#new',       via: 'get'
-  match '/signin',    to: 'person#signin',       via: 'get'
-  match '/howto',     to: 'welcome#howto',       via: 'get'
-  match '/survey',    to: 'survey#survey',       via: 'get'
-  match '/welcome/:id' => 'welcome#index',  via: 'get'
+  match '/howto',           to: 'welcome#howto',      via: 'get'
+  match '/users/signin',    to: 'users#signin',       via: 'get'
+  match '/survey',          to: 'survey#survey',      via: 'get'
+  match '/profile',         to: 'users#profile',      via: 'get'
+
+  resources :books
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

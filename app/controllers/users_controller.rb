@@ -22,8 +22,7 @@ class UsersController < ApplicationController
 
 	    respond_to do |format|
 	    	if @user.save
-	    		format.html { redirect_to @user , notice: 'user was successfully created.' }
-	        	format.json { render json: @user }
+	    		format.html { redirect_to users_signin_path , notice: 'User was successfully created, please log in.' }
 	      	else
 	        	format.html { render action: 'new' }
 	        	format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -31,9 +30,15 @@ class UsersController < ApplicationController
 	    end
   	end
 
+  	def signin
+  	end
+  	
+
 	def show
 		@user = User.find(params[:id])
   	end	
+
+  	
 
 
   	private

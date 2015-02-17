@@ -17,12 +17,16 @@
     <!-- yield main body -->
     <%= yield %>
     <%= render 'layouts/footer' %>
+    
     <%=  
     if Rails.env.development?
       debug(params)
     end %>
+
+
     <%=  
     if Rails.env.development?
+      debug(notice)
     end %>
   </body>
 </html>
