@@ -6,8 +6,15 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><%= link_to "HowTo", howto_path %></li>
-				<li><%= link_to "SignIn", signin_path %></li>
+
+				<% if current_user %>
+					<li><%= link_to "HowTo", howto_path %></li>
+					<li><%= link_to "Logout", logout_path %></li>
+  				<% else %>
+  					<li><%= link_to "HowTo", howto_path %></li>
+					<li><%= link_to "Login", login_path %></li>
+				<% end %>
+				
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>

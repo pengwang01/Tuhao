@@ -26,7 +26,10 @@
     if Rails.env.development?
       debug(params)
     end %>
-
+    <%=  
+    if Rails.env.development?
+      debug(current_user)
+    end %>
 
     <%=  
     if Rails.env.development?
