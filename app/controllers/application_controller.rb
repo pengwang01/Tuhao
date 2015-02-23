@@ -9,5 +9,8 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
-  
+  # Enforce the user to log in for any secured pages
+  def authorize
+    redirect_to '/login', flash: {warning: "Please log in."} unless current_user 
+  end
 end

@@ -33,11 +33,21 @@
 
     <%=  
     if Rails.env.development?
-      debug(notice)
+      debug(flash[:notice])
     end %>
     <%=  
     if Rails.env.development?
-      debug(alert)
+      debug(flash[:alert])
+    end %>
+
+    <%=  
+    if Rails.env.development?
+      debug(flash[:warning])
+    end %>
+
+    <%=  
+    if Rails.env.development?
+      debug(flash[:success])
     end %>
   </body>
 </html>
