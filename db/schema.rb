@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150215053734) do
+ActiveRecord::Schema.define(version: 20150222042730) do
 
   create_table "SurveyQuestions", force: true do |t|
     t.integer "QuestionId"
@@ -52,99 +52,11 @@ ActiveRecord::Schema.define(version: 20150215053734) do
     t.integer "QuestionId10"
   end
 
-  create_table "books", force: true do |t|
-    t.string   "name"
-    t.integer  "year"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "cash_accts", force: true do |t|
-    t.decimal  "totalBalance"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "contracts", force: true do |t|
-    t.datetime "shipperApproveDate"
-    t.datetime "senderApproveDate"
-    t.string   "receiver"
-    t.string   "address1"
-    t.string   "address2"
-    t.string   "city"
-    t.string   "zipCode"
-    t.string   "sender"
-    t.string   "shipper"
-    t.string   "deposit"
-    t.integer  "statusType"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "deposits", force: true do |t|
-    t.datetime "depositDate"
-    t.integer  "statusType"
-    t.decimal  "amount"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "items", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "posts", force: true do |t|
-    t.string   "SendFrom"
-    t.string   "SendTo"
-    t.string   "Description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "roles", force: true do |t|
-    t.integer "person_id"
-    t.integer "shipper_id"
-    t.integer "sender_id"
-  end
-
-  add_index "roles", ["person_id"], name: "index_roles_on_person_id"
-  add_index "roles", ["sender_id"], name: "index_roles_on_sender_id"
-  add_index "roles", ["shipper_id"], name: "index_roles_on_shipper_id"
-
-  create_table "senders", force: true do |t|
-    t.string   "cashAcct"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "shippers", force: true do |t|
-    t.string   "driverLicense"
-    t.string   "carLicense"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "cashAcct"
-  end
-
-  create_table "statuses", force: true do |t|
-    t.integer  "statusType"
-    t.string   "status"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "transactions", force: true do |t|
-    t.integer  "cashAcct"
-    t.integer  "deposit"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: true do |t|
-    t.string   "password"
-    t.string   "firstName"
-    t.string   "lastName"
+    t.string   "firstname"
+    t.string   "lastname"
     t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

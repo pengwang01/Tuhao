@@ -52,3 +52,8 @@ gem 'bootstrap-sass', '~> 3.3.3'
 
 # Peng adds autoprefixer-rails
 gem 'autoprefixer-rails'
+
+# Peng adds password encription gem
+gem 'bcrypt'
+gem 'bcrypt-ruby'
+

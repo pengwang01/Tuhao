@@ -1,0 +1,31 @@
+<div id="main-body" class="center_ver center imageBG-others">
+
+  <div class="container">
+    
+    <div class="well well-lg center" style="width: 50%; margin: auto">
+      <% if notice then %>
+        <div class="alert alert-success" role="alert"> <%= notice %> </div>
+      <% end %>
+      <% if alert then %>
+        <div class="alert alert-danger" role="alert"> <%= alert %> </div>
+      <% end %>
+
+      <legend><i class="glyphicon glyphicon-user"></i> Sign in</legend>
+        <%= form_for sessions_path, method: "POST" , html: {class: "form"} do %>
+
+          <%= text_field_tag :email, params[:email], :placeholder => "Email", class: "form-control", :autofocus => true, :required => true %>
+          <br/>
+          <%= password_field_tag :password, params[:password], :placeholder => "Password", class: "form-control", :autofocus => true, :required => true %>       
+          <br />
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              <button class="btn btn-md btn-primary btn-block" type="submit">Sign In</button>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <%= link_to "Register", new_user_path , class: "btn btn-md btn-default btn-block" %>
+            </div>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>

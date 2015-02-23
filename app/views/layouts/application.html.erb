@@ -18,6 +18,10 @@
     <%= yield %>
     <%= render 'layouts/footer' %>
     
+    <% flash.each do |name, msg| %>
+      <% content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+
     <%=  
     if Rails.env.development?
       debug(params)
@@ -27,6 +31,10 @@
     <%=  
     if Rails.env.development?
       debug(notice)
+    end %>
+    <%=  
+    if Rails.env.development?
+      debug(alert)
     end %>
   </body>
 </html>
