@@ -75,14 +75,14 @@
 	display: inline-block;
 	width: 18px;
 	height: 18px;
-	background: #ddd;
+	background: #fff;
 	margin: 4px;
 	border-radius: 50%;
 	cursor: pointer;
 }
 
 .cbp-fwdots span:hover {
-	background: #999;
+	background: #378fc3;
 }
 
 .cbp-fwdots span.cbp-fwcurrent {
