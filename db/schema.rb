@@ -90,6 +90,14 @@ ActiveRecord::Schema.define(version: 20150215053734) do
   end
 
   create_table "items", force: true do |t|
+    t.string   "itemName"
+    t.decimal  "length"
+    t.decimal  "width"
+    t.decimal  "weight"
+    t.decimal  "height"
+    t.string   "description"
+    t.string   "specialInstruction"
+    t.decimal  "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -119,8 +127,8 @@ ActiveRecord::Schema.define(version: 20150215053734) do
   end
 
   create_table "shippers", force: true do |t|
-    t.string   "driverLicense"
-    t.string   "carLicense"
+    t.string   "DriverLicense"
+    t.string   "CarLicense"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "cashAcct"

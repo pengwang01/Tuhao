@@ -1,6 +1,35 @@
 	<head>
 		<%= stylesheet_link_tag "fwSliderComponent",media:"all" %>
 		<%= stylesheet_link_tag "fwSliderDefault",media:"all" %>
+		<script language="JavaScript">
+		function getResult(){
+				var list = document.getElementsByTagName("input");
+				var result="";
+				var id = 1;
+
+				for(var i=0; i < list.length; i++){
+				    if (list[i].checked){
+				    	//alert(document.getElementById(id).value);
+				      document.getElementById("UserAnswer"+id).value = list[i].value;
+				      id++;
+				      result  = result + list[i].value;
+				   }
+				   if(list[i].id == "trickExplain")  {
+				   		document.getElementById("UserComment").value = list[i].value;
+				   }
+				}
+				/*
+				result = result.split('');
+				$.ajax({
+			           type:'POST', 
+			           url: '/survey/create', 
+			           data: $.param({ survey: {survey: "1", "0", result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7], result[8], result[9] }})
+			      });
+				alert("Done Posting");
+				*/
+				//alert(document.getElementsbyId("UserAnswer1").value);
+			}
+		</script>
 	</head>
 	<body>
 		<div id='main-body' class="imageBG-others regular-ver">	
@@ -12,62 +41,113 @@
 					<ul>
 						<li>
 							<div style="height:100%;">
-								<p>Here is Question One</p>
-								<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
+								<p>1. How old are you?</p>
+								<label>a. Under 18 <input type="radio" name="a0" value="1"></input></label><br><br>
+								<label>b. 19 - 40 <input type="radio" name="a0" value="2"></input></label><br><br>
+								<label>c. 41 - 60<input type="radio" name="a0" value="3"></input></label><br><br>
+								<label>d. Above 60<input type="radio" name="a0" value="4"></input></label><br><br>
 							</div>
 						</li>
 						<li>
 							<div style="height:100%;">
-								<p>Here is Question Two</p>
-								<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
+								<p>2. Are you a pet lover</p>
+								<label>a. Yes<input type="radio" name="a1" value="1"></input></label><br><br>
+								<label>b. No<input type="radio" name="a1" value="2"></input></label><br><br>
+								<label>c. I'm not sure<input type="radio" name="a1" value="3"></input></label><br><br>
 							</div>
 						</li>
 						<li>
 							<div style="height:100%;" margin:10px>
-								<p>Here is Question Three</p>
-								<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
+								<p>3. How many pets do you have?</p>
+								<label>a. 0 - 3<input type="radio" name="a2" value="1"></input></label><br><br>
+								<label>b. 4 - 6<input type="radio" name="a2" value="2"></input></label><br><br>
+								<label>c. 7 - 9<input type="radio" name="a2" value="3"></input></label><br><br>
+								<label>d. More than 9<input type="radio" name="a2" value="4"></input></label><br><br>
 							</div>
 						</li>
 						<li>
 							<div style="height:100%;">
-								<p>Here is Question Four</p>
-								<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
+								<p>4. hHow much do you spend on your pets each month?</p>
+								<label>a. $0 - $20<input type="radio" name="a3" value="1"></input></label><br><br>
+								<label>b. $21 - $50<input type="radio" name="a3" value="2"></input></label><br><br>
+								<label>c. $51 - $100<input type="radio" name="a3" value="3"></input></label><br><br>
+								<label>d. More than $100<input type="radio" name="a3" value="4"></input></label><br><br>
 							</div>
 						</li>
 						<li>
 							<div style="height:100%;">
-								<p>Here is Question Five</p>
-								<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
+								<p>5. Do you think your pet is cuter than others?</p>
+								<label>a. Yes <input type="radio" name="a4" value="1"></input></label><br><br>
+								<label>b. No <input type="radio" name="a4" value="2"></input></label><br><br>
+								<label>c. I'm not sure<input type="radio" name="a4" value="3"></input></label><br><br>
+							</div>
+						</li>
+						<li>
+							<div style="height:100%;" margin:10px>
+								<p>6. Do your pets know any tricks? If yes, can you explain?</p>
+								<label>a. Yes<input type="radio" name="a5" value="1"></input></label><br><br>
+								<label>b. No <input type="radio" name="a5" value="2"></input></label><br><br>
+								<label>c. Maybe<input type="radio" name="a5" value="3"></input></label><br><br>
+								<label>Explain: <input type="textarea" name="a5" value="" id="trickExplain"></input></label><br><br>
+							</div>
+						</li>
+						<li>
+							<div style="height:100%;" margin:10px>
+								<p>7. Do you have any online social network account?</p>
+								<label>a. Yes <input type="radio" name="a6" value="1"></input></label><br><br>
+								<label>b. No <input type="radio" name="a6" value="2"></input></label><br><br>
+								<label>c. I'm not sure <input type="radio" name="a6" value="3"></input></label><br><br>
+							</div>
+						</li>
+						<li>
+							<div style="height:100%;" margin:10px>
+								<p>8. Do you like to take pictures, videos for your pets?</p>
+								<label>a. Yes <input type="radio" name="a7" value="1"></input></label><br><br>
+								<label>b. No <input type="radio" name="a7" value="2"></input></label><br><br>
+								<label>c. I'm not sure<input type="radio" name="a7" value="3"></input></label><br><br>
+							</div>
+						</li>
+						<li>
+							<div style="height:100%;" margin:10px>
+								<p>9. How often do you shop online for your pets?</p>
+								<label>a. Never<input type="radio" name="a8" value="1"></inpjavascriput></label><br><br>
+								<label>b. Rarely<input type="radio" name="a8" value="2"></input></label><br><br>
+								<label>c. Occasionally<input type="radio" name="a8" value="3"></input></label><br><br>
+								<label>d. Frequently<input type="radio" name="a8" value="4"></input></label><br><br>
 							</div>
 						</li>
 						<li>
 							<div style="height:100%;">
-								<p>Here is Question Six</p>
-								<label>Choice 1 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 2 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 3 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<label>Choice 4 <input type="radio" name="a1" value="1"></input></label><br><br>
-								<button class="btn btn-primary">Submit</button>
+								<p>10. Would you like donate as little as $0.10 to reward your online friend pets if they are adorable/play cute/know tricks/ to show your love an generous?</p>
+								<label>a. Yes <input type="radio" name="a9" value="1"></input></label><br><br>
+								<label>b. No <input type="radio" name="a9" value="2"></input></label><br><br>
+								<label>c. Maybe <input type="radio" name="a9" value="3"></input></label><br><br>
+								<label>d. I don't know<input type="radio" name="a9" value="4"></input></label><br><br>
 							</div>
-							
+						</li>
+						<li>
+							<div style="height:100%;">
+							<button class="btn btn-primary" onclick="getResult();" type="submit">Submit</button>
+							</div>
 						</li>
 					</ul>
 				</div>
+					<%= form_for :surveyresults do |f| %>
+						<%= f.text_field :ResultId, :value => "1", class: "form-control", :autofocus => true, :required => true, :id => "ResultId"%>
+						<%= f.text_field :SurveyId, :value => "1", class: "form-control", :autofocus => true, :required => true, :id => "SurveyId" %>
+						<%= f.text_field :UserAnswer1, :value => "UserAnswer1", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer1" %>
+						<%= f.text_field :UserAnswer2, :value => "UserAnswer2", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer2" %>
+						<%= f.text_field :UserAnswer3, :value => "UserAnswer3", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer3" %>
+						<%= f.text_field :UserAnswer4, :value => "UserAnswer4", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer4" %>
+						<%= f.text_field :UserAnswer5, :value => "UserAnswer5", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer5" %>
+						<%= f.text_field :UserAnswer6, :value => "UserAnswer6", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer6" %>
+						<%= f.text_field :UserAnswer7, :value => "UserAnswer7", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer7" %>
+						<%= f.text_field :UserAnswer8, :value => "UserAnswer8", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer8" %>
+						<%= f.text_field :UserAnswer9, :value => "UserAnswer9", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer9" %>
+						<%= f.text_field :UserAnswer10, :value => "UserAnswer10", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer10" %>
+						<%= f.text_field :UserComment, :value => "UserComment", class: "form-control", :autofocus => true, :required => true, :id => "UserComment" %>
+						<%= f.submit %>
+					<% end %>
 			</div>
 		</div>
 		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>
@@ -76,7 +156,6 @@
 		<script>
 			$( function() {
 				$( '#cbp-fwslider' ).cbpFWSlider();
-
 			} );
 		</script>
 	</body>

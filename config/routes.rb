@@ -7,10 +7,11 @@ Tuhao::Application.routes.draw do
   match '/users/signin',    to: 'users#signin',       via: 'get'
   match '/survey',          to: 'survey#survey',      via: 'get'
   match '/profile',         to: 'users#profile',      via: 'get'
+  match '/survey',          to: 'surveyresults#create', via: 'post'
 
   resources :books
   resources :users
-
+  resources :surveyresults
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
