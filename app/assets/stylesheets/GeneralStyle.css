@@ -92,12 +92,12 @@ form.signup input.form-control:focus {
 
 a.navbar-brand {
 	color: #fff !important;
+  font-weight: 900;
 	text-transform: uppercase;
 }
 a.navbar-brand:hover {
     color: #ddd !important;
 }
-
 
 
 /* Header */
@@ -196,3 +196,14 @@ p.copyright {
 	color: #fff;
 	text-align: center;
 }	
+
+/* divider */
+.vr {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 500px;
+  border: 0;
+  border-left: 1px solid #cccccc;
+  display: inline-block;
+  vertical-align: bottom;
+}

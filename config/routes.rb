@@ -8,6 +8,7 @@ Tuhao::Application.routes.draw do
   match '/logout',          to: 'sessions#destroy',   via: 'get'
   match '/survey',          to: 'survey#survey',      via: 'get'
   match '/profile',         to: 'users#profile',      via: 'get'
+  match '/edit_guarantor',  to: 'users#edit',         via: 'get'
   match '/survey',          to: 'surveyresults#create', via: 'post'
 
   resources :books
