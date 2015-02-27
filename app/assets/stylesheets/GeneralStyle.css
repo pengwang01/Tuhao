@@ -92,20 +92,17 @@ form.signup input.form-control:focus {
 
 a.navbar-brand {
 	color: #fff !important;
-	font-weight: 900;
 	text-transform: uppercase;
 }
 a.navbar-brand:hover {
     color: #ddd !important;
 }
 
-.navbar-color{
-  background-color: #5B2971
-}
+
 
 /* Header */
 #main-body{	
-	background-color: #444;
+	background-color: #ddd;
 	margin-top: 20px;
 	background-attachment: relative;
 	background-position: center center;
@@ -128,7 +125,7 @@ a.navbar-brand:hover {
 }
 
 .imageBG-others {
-  background: url(PlayCute/GeneralBG_light_purple.jpg) repeat center top;
+  background: url() repeat center top;
 }
 .center_ver{
   padding-bottom: 80px;
