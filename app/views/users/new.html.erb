@@ -1,23 +1,24 @@
-    <div id="main-body" class=" center_ver container center imageBG-others">
-        <div class="well well-lg center" style="width: 50%; margin: auto">
-            <legend><i class="glyphicon glyphicon-user"></i> Sign up!</legend>
-            <%= form_for @user, html: {class: "form"} do |f| %>
-                <div class="row">
-                    <div class="col-xs-6 col-md-6">
-                        <%= f.text_field :firstName, :placeholder => "First Name", class: "form-control", :autofocus => true, :required => true %>
-                    </div>
-                    <div class="col-xs-6 col-md-6">
-                        <%= f.text_field :lastName, :placeholder => "Last Name", class: "form-control", :autofocus => true, :required => true %>
-                    </div>
+<div id="main-body" class=" center_ver container center imageBG-others">
+    <div class="well well-lg center" style="width: 50%; margin: auto">
+        <legend><i class="glyphicon glyphicon-user"></i> Sign up!</legend>
+        <%= form_for @user, html: {class: "form"} do |f| %>
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    <%= f.text_field :firstname, :placeholder => "First Name", class: "form-control", :autofocus => true, :required => true %>
                 </div>
-                <br/>
-                <%= f.text_field :email, :placeholder => "Email", class: "form-control", :autofocus => true, :required => true %>
-                <br/>
-                <%= f.text_field :password, :placeholder => "New Password", class: "form-control", :autofocus => true, :required => true %>
-                <br/>
-
-                <button class="btn btn-md btn-primary btn-block" type="submit">
-                Sign up</button>
-            <% end %>
-        </div>
+                <div class="col-xs-6 col-md-6">
+                    <%= f.text_field :lastname, :placeholder => "Last Name", class: "form-control", :autofocus => true, :required => true %>
+                </div>
+            </div>
+            <br/>
+            <%= f.text_field :email, :placeholder => "Email", class: "form-control", :autofocus => true, :required => true %>
+            <br/>
+            <%= f.password_field :password, :placeholder => "New Password", class: "form-control", :autofocus => true, :required => true %>
+            <br/>
+            <%= f.password_field :password_confirmation, :placeholder => "Confirm Password", class: "form-control", :autofocus => true, :required => true %>
+            <br/>
+            <button class="btn btn-md btn-primary btn-block" type="submit">
+            Sign up</button>
+        <% end %>
     </div>
+</div>

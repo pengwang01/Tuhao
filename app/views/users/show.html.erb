@@ -1,17 +1,24 @@
 
-<div id="main-body" class=" center_ver container center imageBG-others">
-	<h1>User created successfully!</h1>
-	<h3>
-  		<strong>FirstName: </strong><%= @user.firstName %>
-	</h3>
+<div id="main-body" class="center_ver center imageBG-others">
+  	<div class="container">
+		<% if flash[:notice] %>
+        	<div class="alert alert-dismissible alert-info" role="alert"> <%= flash[:notice] %> </div>
+        <% elsif flash[:alert] %>
+        	<div class="alert alert-dismissible alert-danger" role="alert"> <%= flash[:alert] %> </div>
+        <% elsif flash[:warning] %>
+        	<div class="alert alert-dismissible alert-warning" role="alert"> <%= flash[:warning] %> </div>
+        <% elsif flash[:success] %>
+        	<div class="alert alert-dismissible alert-success" role="alert"> <%= flash[:success] %> </div>
+      	<% end %>
+		<h3>
+	  		<strong>FirstName: </strong><%= @user.firstname %>
+		</h3>
 
-	<h3>
-  		<strong>LastName: </strong><%= @user.lastName %>
-	</h3>
-	<h3>
-  		<strong>Email: </strong><%= @user.email %>
-	</h3>
-	<h3>
-  		<strong>Password: </strong><%= @user.password %>
-	</h3>
+		<h3>
+	  		<strong>LastName: </strong><%= @user.lastname %>
+		</h3>
+		<h3>
+	  		<strong>Email: </strong><%= @user.email %>
+		</h3>
+	</div>
 </div>

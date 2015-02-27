@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/img/favicon.png">
     <link href="/assets/application.css.sass" media="all" rel="stylesheet" />
-
+    <%= javascript_include_tag "application" %>
     <title>PlayCute - Online social network for pets</title>
   </head>
 
@@ -18,15 +18,36 @@
     <%= yield %>
     <%= render 'layouts/footer' %>
     
+    <% flash.each do |name, msg| %>
+      <% content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+
     <%=  
     if Rails.env.development?
       debug(params)
     end %>
-
+    <%=  
+    if Rails.env.development?
+      debug(current_user)
+    end %>
 
     <%=  
     if Rails.env.development?
-      debug(notice)
+      debug(flash[:notice])
+    end %>
+    <%=  
+    if Rails.env.development?
+      debug(flash[:alert])
+    end %>
+
+    <%=  
+    if Rails.env.development?
+      debug(flash[:warning])
+    end %>
+
+    <%=  
+    if Rails.env.development?
+      debug(flash[:success])
     end %>
   </body>
 </html>

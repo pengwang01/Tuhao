@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
+	before_filter :authorize, :except => ["new", "create"]
 
 	def user_params
-    	params.require(:user).permit(:firstName, :lastName, :email, :password)
+    	params.require(:user).permit(:firstname, :lastname, :email, :password, :password_confirmation)
   	end
 	
 
@@ -22,9 +23,9 @@ class UsersController < ApplicationController
 
 	    respond_to do |format|
 	    	if @user.save
-	    		format.html { redirect_to users_signin_path , notice: 'User was successfully created, please log in.' }
+	    		format.html { redirect_to login_path , flash:{success: 'User was successfully created, please log in.'} }
 	      	else
-	        	format.html { render action: 'new' }
+	        	format.html { render action: 'new', flash:{alert: "Unable to create such user."} }
 	        	format.json { render json: @user.errors, status: :unprocessable_entity }
 	      	end
 	    end
@@ -37,9 +38,6 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
   	end	
-
-  	
-
 
   	private
     # Use callbacks to share common setup or constraints between actions.
