@@ -51,6 +51,9 @@ class UsersController < ApplicationController
 
   	def signin
   	end
+
+  	def explore
+    end
   	
 
 	def show

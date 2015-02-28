@@ -2,14 +2,15 @@ Tuhao::Application.routes.draw do
   
   root 'welcome#index'
   
-  match '/howto',           to: 'welcome#howto',      via: 'get'
-  match '/login',           to: 'sessions#new',       via: 'get'
-  match '/login',           to: 'sessions#create',    via: 'post'
-  match '/logout',          to: 'sessions#destroy',   via: 'get'
-  match '/survey',          to: 'survey#survey',      via: 'get'
-  match '/profile',         to: 'users#profile',      via: 'get'
-  match '/edit_guarantor',  to: 'users#edit',         via: 'get'
+  match '/howto',           to: 'welcome#howto',        via: 'get'
+  match '/login',           to: 'sessions#new',         via: 'get'
+  match '/login',           to: 'sessions#create',      via: 'post'
+  match '/logout',          to: 'sessions#destroy',     via: 'get'
+  match '/survey',          to: 'survey#survey',        via: 'get'
+  match '/profile',         to: 'users#profile',        via: 'get'
+  match '/edit_guarantor',  to: 'users#edit',           via: 'get'
   match '/survey',          to: 'surveyresults#create', via: 'post'
+  match '/explore',         to: 'users#explore',       via: 'get'
 
   resources :books
   resources :users

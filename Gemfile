@@ -57,3 +57,6 @@ gem 'autoprefixer-rails'
 gem 'bcrypt'
 gem 'bcrypt-ruby'
 
+# Peng adds masonry-rails: pinterest like content loading plugin, infiniate scrolling
+gem 'masonry-rails'
+
