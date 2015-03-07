@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150222042730) do
+ActiveRecord::Schema.define(version: 20150307050744) do
 
   create_table "SurveyQuestions", force: true do |t|
     t.integer "QuestionId"
@@ -50,6 +50,16 @@ ActiveRecord::Schema.define(version: 20150222042730) do
     t.integer "QuestionId8"
     t.integer "QuestionId9"
     t.integer "QuestionId10"
+  end
+
+  create_table "pets", force: true do |t|
+    t.string   "name"
+    t.date     "birthday"
+    t.integer  "gender"
+    t.integer  "type"
+    t.string   "breed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

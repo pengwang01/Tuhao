@@ -3,46 +3,47 @@
 	<!-- edit form column -->
      	<h1 class="">Edit Guarantor Info</h1>
 
-        <form class="form-horizontal" role="form">
+        <%= form_for @user, html: {class: "form-horizontal"} do |f| %>
+        
             <div class="form-group">
                 <label class="col-lg-3 control-label">First name:</label>
                 <div class="col-lg-8">
-                    <input class="form-control" value="Jane" type="text">
+                    <%= f.text_field :firstname, :placeholder => "First Name", class: "form-control", :autofocus => true, :required => true %>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-lg-3 control-label">Last name:</label>
                 <div class="col-lg-8">
-                    <input class="form-control" value="Bishop" type="text">
+                    <%= f.text_field :lastname, :placeholder => "Last Name", class: "form-control", :autofocus => true, :required => true %>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-lg-3 control-label">Email:</label>
                 <div class="col-lg-8">
-                    <input class="form-control" value="janesemail@gmail.com" type="text">
+                    <%= f.text_field :email, :placeholder => "Email", class: "form-control", :autofocus => true, :required => true %>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-3 control-label">Password:</label>
                 <div class="col-md-8">
-                    <input class="form-control" value="11111122333" type="password">
+                    <%= f.password_field :password, :placeholder => "New Password", class: "form-control", :autofocus => true, :required => true %>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-3 control-label">Confirm password:</label>
                 <div class="col-md-8">
-                    <input class="form-control" value="11111122333" type="password">
+                    <%= f.password_field :password_confirmation, :placeholder => "Confirm Password", class: "form-control", :autofocus => true, :required => true %>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-3 control-label"></label>
                 <div class="col-md-8">
-                    <input class="btn btn-primary" value="Save Changes" type="button"> <span class=""></span>
+                    <input class="btn btn-primary" value="Save Changes" type="submit"> <span class=""></span>
 
                     <input class="btn btn-default" value="Cancel" type="reset">
                 </div>
             </div>
-        </form>
+        <% end %>
     </div>
     </div>
 </div>

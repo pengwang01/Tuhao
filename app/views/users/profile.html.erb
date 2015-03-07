@@ -1,6 +1,15 @@
 
 <div id="main-body" class="regular_ver imageBG-others">
     <div class="container">
+        <% if flash[:notice] %>
+            <div class="alert alert-dismissible alert-info" role="alert"> <%= flash[:notice] %> </div>
+        <% elsif flash[:alert] %>
+            <div class="alert alert-dismissible alert-danger" role="alert"> <%= flash[:alert] %> </div>
+        <% elsif flash[:warning] %>
+            <div class="alert alert-dismissible alert-warning" role="alert"> <%= flash[:warning] %> </div>
+        <% elsif flash[:success] %>
+            <div class="alert alert-dismissible alert-success" role="alert"> <%= flash[:success] %> </div>
+        <% end %>
         <div class="row">
             <div class="col-md-3">
                 <h1 class=""><span class="glyphicon glyphicon-user"></span> Guarantor <%= link_to "Edit", edit_guarantor_path , class: "btn btn-xs btn-primary" %></h1>

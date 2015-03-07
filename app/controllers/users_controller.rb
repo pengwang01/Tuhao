@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_filter :authorize, :except => ["new", "create"]
+	before_filter :authorize, :except => ["new", "create", "update"]
 
 	def user_params
     	params.require(:user).permit(:firstname, :lastname, :email, :password, :password_confirmation)
@@ -33,14 +33,16 @@ class UsersController < ApplicationController
 
   	# GET /books/1/edit
     def edit
+    	@user = User.find(current_user.id)
     end
 
   	# PATCH/PUT /users/1
   	# PATCH/PUT /users/1.json
 	def update
+		@user = User.find(current_user.id)
 		respond_to do |format|
 		  if @user.update(user_params)
-		    format.html { redirect_to @user, notice: 'User was successfully updated.' }
+		    format.html { redirect_to profile_path, flash: {success: 'User was successfully updated.' } }
 		    format.json { head :no_content }
 		  else
 		    format.html { render action: 'edit' }
@@ -60,8 +62,13 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
   	end	
 
+  	
   	private
-    # Use callbacks to share common setup or constraints between actions.
+
+  		def set_book
+      	@user = User.find(params[:id])
+    	end
+    	# Use callbacks to share common setup or constraints between actions.
     	def set_post
       		@user = User.find(params[:id])
     	end
