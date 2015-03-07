@@ -12,11 +12,13 @@
         <% end %>
         <div class="row">
             <div class="col-md-3">
-                <h1 class=""><span class="glyphicon glyphicon-user"></span> Guarantor <%= link_to "Edit", edit_guarantor_path , class: "btn btn-xs btn-primary" %></h1>
+                <h1 class=""><span class="glyphicon glyphicon-user"></span> Guarantor </h1>
                 <hr class="">
 
                 <h4><%= current_user.firstname %> <%= current_user.lastname %></h4>
                 <h4><%= current_user.email %></h4>
+                <%= link_to "Update Profile", update_user_profile_path , class: "btn btn-xs btn-primary" %>
+                <%= link_to "Change Password", update_user_password_path , class: "btn btn-xs btn-primary" %>
             </div>
             <div class="col-md-1">
                 <div class="vr">

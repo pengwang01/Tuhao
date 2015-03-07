@@ -32,7 +32,10 @@ class UsersController < ApplicationController
   	end
 
   	# GET /books/1/edit
-    def edit
+    def edit_profile
+    	@user = User.find(current_user.id)
+    end
+    def edit_password
     	@user = User.find(current_user.id)
     end
 
@@ -45,7 +48,7 @@ class UsersController < ApplicationController
 		    format.html { redirect_to profile_path, flash: {success: 'User was successfully updated.' } }
 		    format.json { head :no_content }
 		  else
-		    format.html { render action: 'edit' }
+		    format.html { redirect_to profile_path, flash: {alert: 'Unable to update password.' } }
 		    format.json { render json: @user.errors, status: :unprocessable_entity }
 		  end
 		end
