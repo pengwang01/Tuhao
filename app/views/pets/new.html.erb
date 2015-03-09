@@ -1,0 +1,35 @@
+<div id="main-body" class=" center_ver container center imageBG-others">
+    <div class="well well-lg center" style="width: 50%; margin: auto">
+        <legend>Create My Pet</legend>
+        <%= form_for @pet, html: {class: "form"} do |f| %>
+            <%= f.text_field :name, :placeholder => "Name", class: "form-control", :autofocus => true, :required => true %>
+            <br/>
+            <%= f.date_field :birthday, :placeholder => "birthday", class: "form-control", :autofocus => true, :required => true %>      
+            
+            <br/>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <%= f.label "Gender " %>
+                    <%= f.select :gender, options_for_select([['Male',1],['Female',2]], params[:gender]) %>
+                </div>
+                <div class="col-md-4">      
+                    <%= f.label "Type " %>
+                    <%= f.select :category, options_for_select([['Dog',1],['Cat',2]], params[:category]) %>
+                </div>
+                <div class="col-md-4">      
+                    <%= f.label "Breed " %>
+                    <%= f.select :breed, options_for_select([['A',1],['B',2], ['C',3]], params[:breed]) %>
+                </div>
+            </div>
+            
+
+            <br/>
+
+            <button class="btn btn-md btn-primary btn-block" type="submit">
+            Add</button>
+        <% end %>
+    </div>
+</div>
+
+

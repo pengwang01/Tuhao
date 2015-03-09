@@ -1,10 +1,5 @@
 class UsersController < ApplicationController
-	before_filter :authorize, :except => ["new", "create", "update"]
-
-	def user_params
-    	params.require(:user).permit(:firstname, :lastname, :email, :password, :password_confirmation)
-  	end
-	
+	before_filter :authorize, :except => ["new", "create"]
 
 	# GET /posts
   	# GET /posts.json
@@ -67,10 +62,14 @@ class UsersController < ApplicationController
 
   	
   	private
-
+  		def user_params
+    		params.require(:user).permit(:firstname, :lastname, :email, :password, :password_confirmation)
+  		end
+  		
   		def set_book
-      	@user = User.find(params[:id])
+      		@user = User.find(params[:id])
     	end
+    	
     	# Use callbacks to share common setup or constraints between actions.
     	def set_post
       		@user = User.find(params[:id])
