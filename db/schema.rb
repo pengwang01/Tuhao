@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150309040013) do
+ActiveRecord::Schema.define(version: 20150311053815) do
 
   create_table "SurveyQuestions", force: true do |t|
     t.integer "QuestionId"
@@ -60,7 +60,10 @@ ActiveRecord::Schema.define(version: 20150309040013) do
     t.string   "breed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "pets", ["user_id"], name: "index_pets_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "firstname"

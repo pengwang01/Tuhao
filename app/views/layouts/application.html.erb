@@ -32,7 +32,7 @@
     end %>
     <%=  
     if Rails.env.development?
-      debug(session[:user_id])
+      debug(current_user.pets)
     end %>
     <%=  
     if Rails.env.development?

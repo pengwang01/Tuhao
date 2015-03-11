@@ -6,7 +6,6 @@ class CreatePets < ActiveRecord::Migration
       t.integer :gender
       t.integer :type
       t.string :breed
-
       t.timestamps
     end
   end

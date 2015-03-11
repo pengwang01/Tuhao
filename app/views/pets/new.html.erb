@@ -4,8 +4,12 @@
         <%= form_for @pet, html: {class: "form"} do |f| %>
             <%= f.text_field :name, :placeholder => "Name", class: "form-control", :autofocus => true, :required => true %>
             <br/>
-            <%= f.date_field :birthday, :placeholder => "birthday", class: "form-control", :autofocus => true, :required => true %>      
-            
+            <div class="row">
+                <div class="col-md-12">
+                    <%= f.label "Birthday " %>
+                    <%= f.date_field :birthday, :value => "Birthday", class: "form-control", :autofocus => true, :required => true %>      
+                </div>
+            </div>
             <br/>
             
             <div class="row">

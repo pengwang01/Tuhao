@@ -12,10 +12,12 @@ class PetsController < ApplicationController
 		@pet = Pet.new
 	end
 
+
 	# POST
 	def create
+	params[:pet][:user_id] = current_user.id
     @pet = Pet.new(pet_params)
-
+    
 	    respond_to do |format|
 	    	if @pet.save
 	    		format.html { redirect_to profile_path , flash:{success: 'Pet was successfully created.'} }
@@ -24,11 +26,12 @@ class PetsController < ApplicationController
 	        	format.json { render json: @pet.errors, status: :unprocessable_entity }
 	      	end
 	    end
+	current_user.pets << @pet
   	end
 
   	private
   		def pet_params
-    		params.require(:pet).permit(:name, :birthday, :gender, :category, :breed)
+    		params.require(:pet).permit(:name, :birthday, :gender, :category, :breed, :user_id)
   		end
   		
   		def set_book
