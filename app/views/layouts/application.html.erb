@@ -32,7 +32,9 @@
     end %>
     <%=  
     if Rails.env.development?
-      debug(current_user.pets)
+      if (current_user != nil) then
+        debug(current_user.pets)
+      end
     end %>
     <%=  
     if Rails.env.development?
