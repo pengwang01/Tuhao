@@ -12,8 +12,6 @@ Tuhao::Application.routes.draw do
   match '/update_user_password',  to: 'users#edit_password',           via: 'get'
   match '/survey',          to: 'surveyresults#create', via: 'post'
   match '/explore',         to: 'users#explore',       via: 'get'
-
-  resources :books
   resources :users
   resources :surveyresults
   resources :sessions
