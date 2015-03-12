@@ -12,6 +12,10 @@ class PetsController < ApplicationController
 		@pet = Pet.new
 	end
 
+	def edit_profile
+		# params[:id] is the pet id passed in url
+    	@pet = Pet.find(params[:id])
+    end
 
 	# POST
 	def create
@@ -26,8 +30,20 @@ class PetsController < ApplicationController
 	        	format.json { render json: @pet.errors, status: :unprocessable_entity }
 	      	end
 	    end
-	current_user.pets << @pet
   	end
+
+  	def update
+		@pet = Pet.find(params[:id])
+		respond_to do |format|
+		  if @pet.update(pet_params)
+		    format.html { redirect_to profile_path, flash: {success: 'Pet was successfully updated.' } }
+		    format.json { head :no_content }
+		  else
+		    format.html { redirect_to profile_path, flash: {alert: 'Unable to update pet profile.' } }
+		    format.json { render json: @pet.errors, status: :unprocessable_entity }
+		  end
+		end
+	end
 
   	private
   		def pet_params
