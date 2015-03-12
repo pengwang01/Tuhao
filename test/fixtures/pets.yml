@@ -4,12 +4,14 @@ one:
   name: MyString
   birthday: 2015-03-06
   gender: 1
-  type: 1
+  category: 1
   breed: MyString
+  user_id: 1
 
 two:
   name: MyString
   birthday: 2015-03-06
   gender: 1
-  type: 1
+  category: 1
   breed: MyString
+  user_id: 1
