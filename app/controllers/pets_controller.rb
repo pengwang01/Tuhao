@@ -14,7 +14,13 @@ class PetsController < ApplicationController
 
 	def edit_profile
 		# params[:id] is the pet id passed in url
-    	@pet = Pet.find(params[:id])
+		if current_user.pets.find_by_id(params[:id]) != nil then
+     		@pet = current_user.pets.find(params[:id])
+     	else
+     		respond_to do |format|
+     			format.html { redirect_to profile_path , flash:{alert: "Could not find the pet."} }
+     		end
+     	end  		
     end
 
 	# POST
@@ -33,7 +39,7 @@ class PetsController < ApplicationController
   	end
 
   	def update
-		@pet = Pet.find(params[:id])
+		@pet = current_user.pets.find_by_id(params[:id])
 		respond_to do |format|
 		  if @pet.update(pet_params)
 		    format.html { redirect_to profile_path, flash: {success: 'Pet was successfully updated.' } }
