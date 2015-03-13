@@ -60,3 +60,7 @@ gem 'bcrypt-ruby'
 # Peng adds masonry-rails: pinterest like content loading plugin, infiniate scrolling
 gem 'masonry-rails'
 
+# Peng adds font-awesome: collection of icons
+gem 'font-awesome-rails'
+
+
