@@ -19,7 +19,7 @@
     <%= render 'layouts/footer' %>
     
 
-    
+    <% if Rails.application.enable_debug == 1 then %>
       <%=  
       if Rails.env.development?
         debug(params)
@@ -52,6 +52,6 @@
       if Rails.env.development?
         debug(flash[:success])
       end %>
-    
+    <% end %>
   </body>
 </html>
