@@ -21,7 +21,7 @@ class SurveyresultsController < ApplicationController
     @surveyresults = Surveyresult.new(surveyresult_params)
 	    respond_to do |format|
 	    	if @surveyresults.save
-	    		format.html { redirect_to root_path , notice: 'Thank you for taking your time to do the survey.' }
+	    		format.html { redirect_to root_path , flash:{success: 'Thank you for taking your time to do the survey.'} }
 	      	else
 	        	format.html { render action: 'new' }
 	        	format.json { render json: @user.errors, status: :unprocessable_entity }

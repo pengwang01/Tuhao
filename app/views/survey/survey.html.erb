@@ -100,7 +100,7 @@
 									</tr>
 									<tr colspan="2">
 										<td></td>
-										<td><h4>2. Are you a pet lover</h4><br><br></td>
+										<td><h4>2. Are you a pet lover?</h4><br><br></td>
 									</tr>
 									<tr>
 										<td></td>
@@ -295,7 +295,7 @@
 									</tr>
 									<tr colspan="2">
 										<td></td>
-										<td><h4>7. Do you have any online social network account?</h4><br><br></td>
+										<td><h4>7. Do you have any online social network accounts?</h4><br><br></td>
 									</tr>
 									<tr>
 										<td></td>
@@ -326,7 +326,7 @@
 									</tr>
 									<tr colspan="2">
 										<td></td>
-										<td><h4>8. Do you like to take pictures, videos for your pets?</h4><br><br></td>
+										<td><h4>8. Do you like taking pictures, videos for your pets?</h4><br><br></td>
 									</tr>
 									<tr>
 										<td></td>
@@ -357,55 +357,7 @@
 									</tr>
 									<tr colspan="2">
 										<td></td>
-										<td><h4>9. How often do you shop online for your pets?</h4><br><br></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td><table width="100%"><tr>
-													<td width = "70%" style="text-align:left;"><label>a. Never </label></td>
-													<td width = "30%" style="text-align:right;"><input type="radio" name="a8" value="1" onclick="getResult();" onclick="getResult();"></input></td>
-										</tr></table></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td><table width="100%"><tr>
-													<td width = "70%" style="text-align:left;"><label>b. Rarely</label></td>
-													<td width = "30%" style="text-align:right;"><input type="radio" name="a8" value="2" onclick="getResult();"></input></td>
-										</tr></table></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td><table width="100%"><tr>
-													<td width = "70%" style="text-align:left;"><label>b. Occasionally</label></td>
-													<td width = "30%" style="text-align:right;"><input type="radio" name="a8" value="3" onclick="getResult();"></input></td>
-										</tr></table></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td><table width="100%"><tr>
-													<td width = "70%" style="text-align:left;"><label>b. Frequently</label></td>
-													<td width = "30%" style="text-align:right;"><input type="radio" name="a8" value="4" onclick="getResult();"></input></td>
-										</tr></table></td>
-										<td></td>
-									</tr>
-								</table>
-							</div>
-						</li>
-						<li>
-							<div style="height:100%;" margin:10px>
-								<table width="100%">
-									<tr style="display:visible;">
-										<td width="35%"></td>
-										<td width="30%"></td>
-										<td width="35%"></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td style="word-wrap: normal;" width="200px"><h4>10. Would you like to buy $0.10 of treats for your online pet friends</h4><br><br></td>
-										<td></td>
+										<td><h4>9. Do you believe your pets can make money by themselves?</h4><br><br></td>
 									</tr>
 									<tr>
 										<td></td>
@@ -423,11 +375,35 @@
 										</tr></table></td>
 										<td></td>
 									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<div style="height:100%;" margin:10px>
+								<table width="100%">
+									<tr style="display:visible;">
+										<td width="35%"></td>
+										<td width="30%"></td>
+										<td width="35%"></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td style="word-wrap: normal;" width="200px"><h4>10. Would you like to buy $0.10 of treats for your online pet friends?</h4><br><br></td>
+										<td></td>
+									</tr>
 									<tr>
 										<td></td>
 										<td><table width="100%"><tr>
-													<td width = "70%" style="text-align:left;"><label>b. Maybe</label></td>
-													<td width = "30%" style="text-align:right;"><input type="radio" name="a8" value="3" onclick="getResult();"></input></td>
+													<td width = "70%" style="text-align:left;"><label>a. Yes </label></td>
+													<td width = "30%" style="text-align:right;"><input type="radio" name="a8" value="1" onclick="getResult();" onclick="getResult();"></input></td>
+										</tr></table></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td><table width="100%"><tr>
+													<td width = "70%" style="text-align:left;"><label>b. No</label></td>
+													<td width = "30%" style="text-align:right;"><input type="radio" name="a8" value="2" onclick="getResult();"></input></td>
 										</tr></table></td>
 										<td></td>
 									</tr>
@@ -454,7 +430,7 @@
 						<%= f.hidden_field :UserAnswer9, :value => "0", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer8" %>
 						<%= f.hidden_field :UserAnswer10, :value => "0", class: "form-control", :autofocus => true, :required => true, :id => "UserAnswer9" %>
 						<%= f.hidden_field :UserComment, :value => "0", class: "form-control", :autofocus => true, :required => true, :id => "UserComment" %>
-						<%= f.submit "Submit" %>
+						<%= f.submit "Submit Survey" %>
 						<% end %>
 							</div>
 
