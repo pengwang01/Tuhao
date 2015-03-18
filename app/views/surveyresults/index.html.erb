@@ -1,0 +1,41 @@
+
+<div id="main-body" class="regular_ver center imageBG-others">
+  <div class="container">
+    
+      <table class="table table-bordred table-striped">
+          <tr>
+            <th>Id</th>
+            <th>Ans1</th>
+            <th>Ans2</th>
+            <th>Ans3</th>
+            <th>Ans4</th>
+            <th>Ans5</th>
+            <th>Ans6</th>
+            <th>Ans7</th>
+            <th>Ans8</th>
+            <th>Ans9</th>
+            <th>Ans10</th>
+            <th>Comments</th>
+          </tr>
+
+        <% @surveyresults.each do |s| %>
+          <tr>
+            <td><%= s.id %></td>
+            <td><%= s.UserAnswer1 %></td>
+            <td><%= s.UserAnswer2 %></td>
+            <td><%= s.UserAnswer3 %></td>
+            <td><%= s.UserAnswer4 %></td>
+            <td><%= s.UserAnswer5 %></td>
+            <td><%= s.UserAnswer6 %></td>
+            <td><%= s.UserAnswer7 %></td>
+            <td><%= s.UserAnswer8 %></td>
+            <td><%= s.UserAnswer9 %></td>
+            <td><%= s.UserAnswer10 %></td>
+            <td><%= s.UserComment %></td>
+          </tr>
+        <% end %>
+        </table>
+
+      
+  </div>
+</div>

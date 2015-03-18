@@ -13,6 +13,7 @@ Tuhao::Application.routes.draw do
   match '/update_pet_profile/:id',  to: 'pets#edit_profile',    via: 'get'
   match '/survey',              to: 'surveyresults#create', via: 'post'
   match '/explore',             to: 'users#explore',        via: 'get'
+  
   resources :users
   resources :surveyresults
   resources :sessions
