@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 	    format.html # show.html.erb
 	    format.json { render json: json_out = {"timeline"=>
 	    	{
-	        	"headline"=>"The Main Timeline Headline Goes here",
+	        	"headline"=>"Welcome to my family!",
 	          	"type"=>"default",
 	          	"text"=>"<p>Intro body text goes here, some HTML is ok</p>",
 	          	"asset"=> {
