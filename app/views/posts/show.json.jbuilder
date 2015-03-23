@@ -1,0 +1,1 @@
+json.extract! @post, :created_at, :content, :headline, :media, :mediacaption, :mediacredit, :created_at, :updated_at

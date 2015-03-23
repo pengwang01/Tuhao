@@ -63,4 +63,7 @@ gem 'masonry-rails'
 # Peng adds font-awesome: collection of icons
 gem 'font-awesome-rails'
 
+# Peng adds timeline js: generate timeline porforlio
+gem 'timelineJS-rails', '~> 1.1.5'
+
 

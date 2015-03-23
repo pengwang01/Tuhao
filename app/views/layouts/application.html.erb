@@ -46,6 +46,12 @@
       end %>
       <%=  
       if Rails.env.development?
+        
+          debug(@posts)
+        
+      end %>
+      <%=  
+      if Rails.env.development?
         debug(flash[:notice])
       end %>
       <%=  

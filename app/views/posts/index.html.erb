@@ -1,0 +1,24 @@
+<body>
+		<div id='main-body' class="imageBG-others regular-ver">	
+			<div class="container">
+				<h1>Listing Timeline</h1>
+
+				<%= link_to 'New Timeline', new_post_path, :class => "btn btn-primary" %>
+				<br />
+
+				<br />
+				<script>
+				  $(document).ready(function() {
+				    createStoryJS({
+				      type:       'timeline',
+				      width:      '1200',
+				      height:     '500',
+				      source:     '<%= @posts %>',
+				      embed_id:   'my-timeline'
+				    });
+				  });
+				</script>
+				<div id="my-timeline"></div>
+			</div>
+		</div>
+	</body>

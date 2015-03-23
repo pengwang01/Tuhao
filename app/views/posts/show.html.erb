@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @post.startdate %>
+</p>
+
+<p>
+  <strong>Enddate:</strong>
+  <%= @post.enddate %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<p>
+  <strong>Headline:</strong>
+  <%= @post.headline %>
+</p>
+
+<p>
+  <strong>Media:</strong>
+  <%= @post.media %>
+</p>
+
+<p>
+  <strong>Mediacaption:</strong>
+  <%= @post.mediacaption %>
+</p>
+
+<p>
+  <strong>Mediacredit:</strong>
+  <%= @post.mediacredit %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', post_path %>

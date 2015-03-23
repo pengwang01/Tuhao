@@ -22,6 +22,7 @@
 //= require masonry/box-maker
 //= require masonry/jquery.loremimages.min
 //= require isotope/jquery.isotope
+//= require timelineJS/embed
 //= require_tree .
 
 
